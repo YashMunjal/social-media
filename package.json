@@ -10,9 +10,10 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
-  "author": "Brad Traversy",
+  "author": "Yash Munjal",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.19.2",
     "bcryptjs": "^2.4.3",
     "client": "file:client",
     "config": "^3.3.0",
