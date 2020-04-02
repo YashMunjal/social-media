@@ -31,7 +31,7 @@ router.post(
     }
 
     const { name, email, password } = req.body;
-    email=email.toLowerCase();
+
     try {
       let user = await User.findOne({ email });
 
