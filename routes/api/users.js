@@ -34,15 +34,13 @@ router.post(
     email=email.toLowerCase();
     try {
       let user = await User.findOne({ email });
-      let username= await User.findOne({name});
+
       if (user) {
         return res
           .status(400)
           .json({ errors: [{ msg: 'User already exists' }] });
       }
-      if (username) {
-            return res.status(400).json({ errors: [{ msg: 'Use another Username! This is already registered' }] });
-        }
+
       const avatar = normalize(
         gravatar.url(email, {
           s: '200',
